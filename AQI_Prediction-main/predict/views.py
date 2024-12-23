@@ -17,10 +17,6 @@ def predict_chances(request):
         input2 = (request.POST.get('input2'))
         input3 = (request.POST.get('input3'))
 
-        aqi_data_updated = pd.read_csv('AQI_Data_Updated.csv')
-
-        #result = aqi_data_updated[(aqi_data_updated.State == input1) & (aqi_data_updated.City == input2) & (aqi_data_updated.StationName == input3)].iloc[:, 3:-1].values
-
         base_url = "https://api.waqi.info"
 
         token = open('waqitoken.txt').read()
